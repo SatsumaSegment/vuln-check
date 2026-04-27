@@ -55,6 +55,9 @@ submit.addEventListener('click', async () => {
         if (uniqueVulnIds.length > 0) {
             const fullVulnerabilities = await fetchVulnerabilityDetails(uniqueVulnIds);
             displayVulnerabilities(fullVulnerabilities);
+        } else if (uniqueVulnIds.length === 0) {
+            displayVulnerabilities([]);
+            return;
         }
     } catch (err) {
         container.innerHTML = `<p>Error: ${err.message}</p>`;
@@ -170,7 +173,7 @@ async function fetchVulnerabilityDetails(ids) {
     // Use vuln ids to get full details
     try {
         const detailPromises = ids.map(id => 
-            fetch(`https://api.osv.dev/v1/vulns/${id}`).then(res => res.json())
+            fetch(`https://api.osv.dev/v1/vulns/${id}`, {signal: AbortSignal.timeout(8000)}).then(res => res.json())
         );
         const details = await Promise.all(detailPromises);
         return details;
