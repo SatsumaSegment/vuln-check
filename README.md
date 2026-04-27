@@ -37,12 +37,12 @@ A lightweight client-side tool that scans dependency files and GitHub repos for 
 
 **Option 1**
 
-Use via GitHub Pages link: 
+Use via GitHub Pages link: [https://satsumasegment.github.io/vuln-check/](https://satsumasegment.github.io/vuln-check/)
 
 
 **Option 2**
 
-1. Clone the repo `git clone `
+1. Clone the repo `git clone https://github.com/SatsumaSegment/vuln-check`
 2. Either:
     - Open `index.html`
     - OR Use live server, e.g. `python -m http.server` then visit http://localhost:8000
