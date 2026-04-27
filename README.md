@@ -37,7 +37,7 @@ A lightweight client-side tool that scans dependency files and GitHub repos for 
 
 **Option 1**
 
-Use via GitHub Pages link: (https://satsumasegment.github.io/vuln-check/)[https://satsumasegment.github.io/vuln-check/]
+Use via GitHub Pages link: [https://satsumasegment.github.io/vuln-check/](https://satsumasegment.github.io/vuln-check/)
 
 
 **Option 2**
