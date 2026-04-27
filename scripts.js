@@ -175,7 +175,7 @@ async function fetchVulnerabilityDetails(ids) {
         const detailPromises = ids.map(id => 
             fetch(`https://api.osv.dev/v1/vulns/${id}`, {signal: AbortSignal.timeout(8000)}).then(res => res.json())
         );
-        const details = await Promise.all(detailPromises);
+        const details = await Promise.allSettled(detailPromises);
         return details;
     } catch (err) {
         throw err;
