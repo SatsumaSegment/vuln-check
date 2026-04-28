@@ -86,6 +86,7 @@ MIT License
 
 - Add full dependency tree scan (not just top-level) _probably use PyPI JSON API for requirements.txt_
 - Add more dependency filetypes (definitely need package-lock.json for full dep tree scan)
+- Add suggested fixes for vulnerabilities found
 - Add GitHub API Token compatibility for private repo scanning
 - Add filtering (by severity)
 - Make UI better for large dependency trees (less scrolling)
